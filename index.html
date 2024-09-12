@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paulo's Restaurant</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      /* Ensures the background image covers the jumbotron */
+      .hero-bg {
+        background-image: url("src/img/bg-image-2.jpeg");
+        background-size: cover;
+        background-position: center;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <div
+      id="scrollButton"
+      class="fixed bottom-6 right-6 z-50 hidden transition-opacity duration-300 transform translate-y-2 opacity-0"
+    >
+      <button
+        title="Scroll to top"
+        aria-label="Scroll to top"
+        class="inline-flex items-center gap-x-2 rounded-full bg-yellow-500 px-4 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600 w-full"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+    <nav class="absolute z-40 bg-yellow-500 opacity-60 shadow w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex-shrink-0 py-4">
+            <a href="#" class="text-2xl font-bold text-black"
+              >Paulo's Restaurant</a
+            >
+          </div>
+          <div class="flex justify-between">
+            <!-- Add margin-left for larger screens -->
+            <div class="hidden sm:ml-10 sm:flex sm:space-x-8">
+              <a
+                href="#"
+                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
+              >
+                Home
+              </a>
+              <a
+                href="#about"
+                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
+              >
+                About
+              </a>
+              <a
+                href="#menu"
+                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
+              >
+                Menu
+              </a>
+              <a
+                href="#contact"
+                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+          <div class="-mr-2 flex items-center sm:hidden">
+            <!-- Mobile menu button -->
+            <button
+              id="mobile-menu-button"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!-- Icon when menu is closed. -->
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="sm:hidden hidden">
+          <div class="pt-2 pb-3 space-y-1">
+            <a
+              href="#"
+              class="text-gray-900 block px-3 py-2 text-base font-medium"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-gray-900 block px-3 py-2 text-base font-medium"
+              >About</a
+            >
+            <a
+              href="#"
+              class="text-gray-900 block px-3 py-2 text-base font-medium"
+              >Services</a
+            >
+            <a
+              href="#"
+              class="text-gray-900 block px-3 py-2 text-base font-medium"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Jumbotron with Background Image and Overlay -->
+    <div class="relative hero-bg h-screen">
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+
+      <!-- Content inside the hero section -->
+      <div
+        class="relative z-10 flex items-center justify-center h-full text-center"
+      >
+        <div class="text-white px-4 sm:px-6 lg:px-8">
+          <h1
+            class="text-5xl text-yellow-500 font-bold sm:text-6xl lg:text-7xl"
+          >
+            "Paulo's Restaurant"
+          </h1>
+          <p class="mt-4 text-2xl text-gray-200">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iusto
+            ratione repellat esse exercitationem nihil. Sequi, cupiditate natus.
+            Repudiandae at praesentium qui deleniti et saepe, ipsam nihil
+            placeat enim molestias.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- About Us Section -->
+    <section id="about">
+      <div class="px-16 py-2 fade-in">
+        <div class="text-center font-bold text-black text-4xl">About Us</div>
+        <div class="grid lg:grid-cols-2 mt-4 gap-4">
+          <div
+            class="rounded-md bg-cover filter: brightness-75 bg-center bg-[url('/src/img/bg-image.jpeg')] h-48 lg:h-36"
+          ></div>
+          <div
+            class="bg-yellow-500 text-black text-center py-2 px-3 rounded h-50 lg:h-36"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+            autem ipsa aliquam dignissimos, minima debitis iure magnam porro
+            voluptatem totam eum molestias nostrum vitae maxime odit inventore
+            aliquid. Quis est corporis perspiciatis beatae delectus neque nobis
+            officiis tempora dolore dolores.
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-2 mt-2 gap-4">
+          <div
+            class="bg-yellow-500 text-black text-center py-2 px-3 rounded h-50 lg:h-36"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+            autem ipsa aliquam dignissimos, minima debitis iure magnam porro
+            voluptatem totam eum molestias nostrum vitae maxime odit inventore
+            aliquid. Quis est corporis perspiciatis beatae delectus neque nobis
+            officiis tempora dolore dolores.
+          </div>
+          <div
+            class="rounded-md bg-cover filter: brightness-75 bg-center bg-[url('/src/img/bg-image-3.jpg')] h-48 lg:h-36"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End About Us Section -->
+
+    <!-- Menu Section -->
+    <section id="menu">
+      <div class="lg:px-24 py-2">
+        <div class="text-center font-bold text-black text-4xl">Menu</div>
+        <div class="grid gap-6 lg:grid-cols-3 justify-center items-center mt-4">
+          <div class="card bg-transparent shadow-xl w-60 mx-auto">
+            <figure>
+              <img src="src/img/menu-1.jpg" alt="" />
+            </figure>
+            <div class="card-body text-black">
+              <h2 class="card-title font-bold -mt-5">Spaghetti Bolognese!</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+                numquam.
+              </p>
+              <div class="card-actions justify-end">
+                <button
+                  class="btn btn-sm bg-yellow-500 text-black hover:bg-transparent mt-2"
+                >
+                  Reserve
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-transparent shadow-xl w-60 mx-auto">
+            <figure>
+              <img src="src/img/menu-2.jpg" alt="" />
+            </figure>
+            <div class="card-body text-black">
+              <h2 class="card-title font-bold -mt-5">Margherita Pizza!</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+                numquam.
+              </p>
+              <div class="card-actions justify-end">
+                <button
+                  class="btn btn-sm bg-yellow-500 text-black hover:bg-transparent mt-2"
+                >
+                  Reserve
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card bg-transparent shadow-xl w-60 mx-auto gap-3">
+            <figure>
+              <img src="src/img/menu-3.jpg" alt="" />
+            </figure>
+            <div class="card-body text-black">
+              <h2 class="card-title font-bold -mt-5">Braciole!</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+                numquam.
+              </p>
+              <div class="card-actions justify-end">
+                <button
+                  class="btn btn-sm bg-yellow-500 text-black hover:bg-transparent mt-2"
+                >
+                  Reserve
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <button
+            class="mx-auto btn bg-yellow-500 text-black hover:bg-transparent mt-6"
+          >
+            See More <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Menu Section -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="">
+        <div class="text-center my-3 font-bold text-black text-4xl">
+          Contact
+        </div>
+        <div class="fade-in container px-16 py-2 mx-auto">
+          <div class="grid lg:grid-cols-2 gap-3">
+            <div class="shadow-xl">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15782.49471410925!2d115.12309965410319!3d-8.535865843151143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23a553578d695%3A0x31a3f463fd8fff3c!2sJl.%20Tukad%20Sang%20Sang%2C%20Banjar%20Anyar%2C%20Kec.%20Kediri%2C%20Kabupaten%20Tabanan%2C%20Bali%2082121!5e0!3m2!1sen!2sid!4v1725764237937!5m2!1sen!2sid"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="flex justify-center items-center shadow-xl">
+              <h1 class="text-black text-center text-lg p-5">
+                <div
+                  class="text-3xl my-3 mx-auto bg-yellow-500 w-14 h-14 flex rounded-full"
+                >
+                  <span class="m-auto"
+                    ><i class="fa-solid fa-location-dot"></i
+                  ></span>
+                </div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+                alias necessitatibus eum quia sunt enim ex reprehenderit quod
+                accusamus tenetur dolore ad magnam quo modi, iure, nihil
+                repellendus, a deleniti.
+              </h1>
+            </div>
+          </div>
+          <div class="flex">
+            <div
+              class="inline-flex mx-auto justify-center items-center sm:flex-row md:flex-row lg:flex-row"
+            >
+              <div class="p-4 m-2">
+                <a
+                  href="#"
+                  class="text-black text-center text-xl mx-5 hover:text-yellow-600"
+                >
+                  <i class="text-center text-4xl fa-brands fa-instagram"></i>
+                </a>
+              </div>
+              <div class="p-4 m-2">
+                <a
+                  href="#"
+                  class="text-black text-center text-xl mx-5 hover:text-yellow-600"
+                >
+                  <i class="text-center text-4xl fa-brands fa-facebook"></i>
+                </a>
+              </div>
+              <div class="p-4 m-2">
+                <a
+                  href="#"
+                  class="text-black text-center text-xl mx-5 hover:text-yellow-600"
+                >
+                  <i class="fa-brands text-4xl fa-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Contact Section -->
+
+    <!-- Footer Section  -->
+    <div class="bg-yellow-500">
+      <h1 class="pt-2 text-center text-black font-semibold">
+        Copyright &copy 2024 MajaCode
+      </h1>
+      <div class="my-2 flex gap-5 justify-center">
+        <a
+          target="_blank"
+          href="https://www.instagram.com/riskymahendraa/"
+          class="text-black"
+        >
+          <i
+            class="text-center text-2xl fa-brands fa-instagram hover:text-white"
+          ></i>
+        </a>
+        <a
+          target="_blank"
+          href="https://api.whatsapp.com/send/?phone=6281237258566&text&type=phone_number&app_absent=0"
+          class="text-black"
+        >
+          <i
+            class="text-center text-2xl fa-brands fa-whatsapp hover:text-white"
+          ></i>
+        </a>
+        <a href="#" class="text-black">
+          <i
+            class="text-center text-2xl fa-brands fa-github hover:text-white"
+          ></i>
+        </a>
+      </div>
+    </div>
+    <!-- End Footer Section -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
