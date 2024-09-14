@@ -35,20 +35,3 @@ function isInViewport(element) {
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
-
-// Add the 'visible' class to sections when they come into view
-function checkSections() {
-  const sections = document.querySelectorAll(".fade-in");
-  sections.forEach((section) => {
-    if (isInViewport(section)) {
-      section.classList.add("visible");
-    }
-  });
-}
-
-// Check sections on scroll and resize events
-window.addEventListener("scroll", checkSections);
-window.addEventListener("resize", checkSections);
-
-// Initial check
-checkSections();

@@ -53,25 +53,25 @@
             <div class="hidden sm:ml-10 sm:flex sm:space-x-8">
               <a
                 href="#"
-                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
+                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium hover:text-gray-500"
               >
                 Home
               </a>
               <a
                 href="#about"
-                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
+                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium hover:text-gray-500"
               >
                 About
               </a>
               <a
                 href="#menu"
-                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
+                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium hover:text-gray-500"
               >
                 Menu
               </a>
               <a
                 href="#contact"
-                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium"
+                class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium hover:text-gray-500"
               >
                 Contact
               </a>
@@ -114,17 +114,17 @@
               >Home</a
             >
             <a
-              href="#"
+              href="#about"
               class="text-gray-900 block px-3 py-2 text-base font-medium"
               >About</a
             >
             <a
-              href="#"
+              href="#menu"
               class="text-gray-900 block px-3 py-2 text-base font-medium"
-              >Services</a
+              >Menu</a
             >
             <a
-              href="#"
+              href="#contact"
               class="text-gray-900 block px-3 py-2 text-base font-medium"
               >Contact</a
             >
@@ -142,27 +142,34 @@
         class="relative z-10 flex items-center justify-center h-full text-center"
       >
         <div class="text-white px-4 sm:px-6 lg:px-8">
-          <h1
-            class="text-5xl text-yellow-500 font-bold sm:text-6xl lg:text-7xl"
-          >
+          <h1 class="text-5xl text-yellow-500 font-bold">
             "Paulo's Restaurant"
           </h1>
-          <p class="mt-4 text-2xl text-gray-200">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit iusto
-            ratione repellat esse exercitationem nihil. Sequi, cupiditate natus.
-            Repudiandae at praesentium qui deleniti et saepe, ipsam nihil
-            placeat enim molestias.
+          <p class="mt-4 text-xl text-gray-200">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            impedit necessitatibus beatae culpa eveniet amet nemo tenetur ea
+            veritatis autem, reiciendis aspernatur laborum officia obcaecati
+            sunt omnis, itaque corrupti officiis optio unde similique tempore
+            ullam. Rem nihil voluptates consequatur ex.
           </p>
         </div>
       </div>
     </div>
     <!-- About Us Section -->
     <section id="about">
-      <div class="px-16 py-2 fade-in">
+      <div class="px-16 py-2">
         <div class="text-center font-bold text-black text-4xl">About Us</div>
         <div class="grid lg:grid-cols-2 mt-4 gap-4">
-          <div
+          <!-- <div
             class="rounded-md bg-cover filter: brightness-75 bg-center bg-[url('/src/img/bg-image.jpeg')] h-48 lg:h-36"
+          ></div> -->
+          <div
+            style="
+              background-image: url(src/img/bg-image.jpeg);
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+            class="rounded-md brightness-50 lg:h-36 h-40"
           ></div>
           <div
             class="bg-yellow-500 text-black text-center py-2 px-3 rounded h-50 lg:h-36"
@@ -185,7 +192,12 @@
             officiis tempora dolore dolores.
           </div>
           <div
-            class="rounded-md bg-cover filter: brightness-75 bg-center bg-[url('/src/img/bg-image-3.jpg')] h-48 lg:h-36"
+            style="
+              background-image: url(src/img/bg-image-3.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+            class="rounded-md brightness-50 lg:h-36 h-40"
           ></div>
         </div>
       </div>
@@ -212,7 +224,12 @@
                 <button
                   class="btn btn-sm bg-yellow-500 text-black hover:bg-transparent mt-2"
                 >
-                  Reserve
+                  <a
+                    target="_blank"
+                    href="https://api.whatsapp.com/send/?phone=6281237258566&text&type=phone_number&app_absent=0"
+                  >
+                    Book Now</a
+                  >
                 </button>
               </div>
             </div>
@@ -231,7 +248,12 @@
                 <button
                   class="btn btn-sm bg-yellow-500 text-black hover:bg-transparent mt-2"
                 >
-                  Reserve
+                  <a
+                    target="_blank"
+                    href="https://api.whatsapp.com/send/?phone=6281237258566&text&type=phone_number&app_absent=0"
+                  >
+                    Book Now</a
+                  >
                 </button>
               </div>
             </div>
@@ -250,7 +272,12 @@
                 <button
                   class="btn btn-sm bg-yellow-500 text-black hover:bg-transparent mt-2"
                 >
-                  Reserve
+                  <a
+                    target="_blank"
+                    href="https://api.whatsapp.com/send/?phone=6281237258566&text&type=phone_number&app_absent=0"
+                  >
+                    Book Now</a
+                  >
                 </button>
               </div>
             </div>
@@ -274,7 +301,7 @@
         <div class="text-center my-3 font-bold text-black text-4xl">
           Contact
         </div>
-        <div class="fade-in container px-16 py-2 mx-auto">
+        <div class="px-16 py-2 mx-auto">
           <div class="grid lg:grid-cols-2 gap-3">
             <div class="shadow-xl">
               <iframe
@@ -363,7 +390,11 @@
             class="text-center text-2xl fa-brands fa-whatsapp hover:text-white"
           ></i>
         </a>
-        <a href="#" class="text-black">
+        <a
+          target="_blank"
+          href="https://github.com/riskymahendraa"
+          class="text-black"
+        >
           <i
             class="text-center text-2xl fa-brands fa-github hover:text-white"
           ></i>
