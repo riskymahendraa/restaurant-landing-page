@@ -1503,10 +1503,6 @@ body {
   margin: auto;
 }
 
-.m-36 {
-  margin: 9rem;
-}
-
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -1658,10 +1654,6 @@ body {
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.gap-56 {
-  gap: 14rem;
 }
 
 .gap-x-2 {
